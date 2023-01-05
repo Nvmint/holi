@@ -17,8 +17,8 @@ class AG:
         self._tamano_gen = tamano_gen
         self._generaciones = generaciones
         self._p = p
-        self._problema = problema
-        self._individuos = np.array([])
+        self._problem = problema
+        self._indi = np.array([])
 
     def run(self):
         self.crearIndividuos()
@@ -45,11 +45,6 @@ class AG:
                       self._mejor_historico._cromosoma, self._mejor_historico._fitness)
             generacion += 1
 
-    def crearIndividuos(self):
-        for i in range(self._cantidad_individuos):
-            cromosoma = np.random.randint(2, size=self._alelos)
-            individuo = Individuo(self._alelos, self._tamano_gen, cromosoma)
-            self._individuos = np.append(self._individuos, [individuo])
 
     def evaluaIndividuos(self):
         for i in self._individuos:
