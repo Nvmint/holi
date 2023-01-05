@@ -16,9 +16,9 @@ class AG:
         self._alelos = alelos
         self._tamano_gen = tamano_gen
         self._generaciones = generaciones
-        self._p = p
-        self._problema = problema
-        self._individuos = np.array([])
+        self._x = p
+        self._ppppp= problema
+        self._iholi = np.array([])
 
     def run(self):
         self.crearIndividuos()
